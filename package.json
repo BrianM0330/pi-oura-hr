@@ -1,6 +1,6 @@
 {
   "name": "pi-oura-hr",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Oura Ring client primitives + optional pi footer (heart rate, readiness)",
   "type": "module",
   "license": "MIT",
@@ -15,10 +15,13 @@
   },
   "keywords": [
     "pi-package",
+    "pi-extension",
     "pi",
+    "pi-coding-agent",
     "oura",
     "heartrate",
-    "health"
+    "health",
+    "footer"
   ],
   "exports": {
     ".": "./lib/index.ts",
