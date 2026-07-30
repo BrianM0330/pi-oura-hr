@@ -1,5 +1,7 @@
 # oura-hr
 
+**Built completely with my grok 4.5 clanker**
+
 Oura Ring for pi: a small **client library** plus an **optional, fully editable** footer.
 
 Use the library alone if you want your own commands/UI. Turn on the footer only when you want a glanceable heart + BPM (+ readiness).
