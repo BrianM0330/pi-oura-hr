@@ -1,5 +1,5 @@
 {
-  "name": "oura-hr",
+  "name": "pi-oura-hr",
   "version": "1.1.0",
   "description": "Oura Ring client primitives + optional pi footer (heart rate, readiness)",
   "type": "module",

@@ -1,6 +1,6 @@
 ---
 name: oura-hr
-description: Oura Ring client for pi — OAuth, heart rate, readiness, and an optional fully-editable footer (red heart + BPM). Use when wiring Oura into pi, building a custom health extension on oura-hr lib primitives, or debugging /oura commands.
+description: Oura Ring client for pi (npm:pi-oura-hr) — OAuth, heart rate, readiness, and an optional fully-editable footer (red heart + BPM). Use when wiring Oura into pi, building a custom health extension on pi-oura-hr lib primitives, or debugging /oura commands.
 ---
 
 # Oura → pi

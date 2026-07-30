@@ -1,14 +1,14 @@
 # Architecture & performance
 
-How `oura-hr` is put together, how polling relates to the Oura cloud sync, and how it hooks into pi’s lifecycle without blocking startup.
+How `pi-oura-hr` is put together, how polling relates to the Oura cloud sync, and how it hooks into pi’s lifecycle without blocking startup.
 
 ## Code structure
 
 ```
-oura-hr/
+oura-hr/                  # repo / local folder (npm name: pi-oura-hr)
   index.ts              # Pi extension only: commands + optional footer painter
   lib/
-    index.ts            # Public exports (import as "oura-hr" or "./lib")
+    index.ts            # Public exports (import as "pi-oura-hr" or "./lib")
     types.ts            # Config + API types (footer.* fully editable)
     paths.ts            # URLs, default intervals, default status key
     config.ts           # ~/.pi/agent/oura.json load/save (mtime cache)
@@ -22,7 +22,7 @@ oura-hr/
   README.md             # Human/agent setup
   OURA-API.md           # Field notes on the Oura API
   ARCHITECTURE.md       # This file
-  package.json          # exports + pi.extensions
+  package.json          # exports + pi.extensions (name: pi-oura-hr)
 ```
 
 **Split of concerns**
@@ -32,7 +32,7 @@ oura-hr/
 | `lib/*` | OAuth, HTTP, config, cache, footer **string** render | No |
 | `index.ts` | `/oura*` commands, timers, `setStatus`, theme.fg bridge | Yes |
 
-Other extensions should import from `oura-hr` / `oura-hr/lib`, not copy OAuth logic. Skip the extension entry if you only want data.
+Other extensions should import from `pi-oura-hr` / `pi-oura-hr/lib`, not copy OAuth logic. Skip the extension entry if you only want data.
 
 ## Pi lifecycle (why we never await network on start)
 

@@ -1,7 +1,7 @@
 /**
  * Oura client primitives — usable from any pi extension or Node script.
  *
- *   import { ensureAccessToken, fetchLatestHeartRate, loadConfig } from "oura-hr";
+ *   import { ensureAccessToken, fetchLatestHeartRate, loadConfig } from "pi-oura-hr";
  *
  * No pi UI dependency. Optional footer helpers are in `./footer.ts`.
  */

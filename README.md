@@ -1,4 +1,4 @@
-# oura-hr
+# pi-oura-hr
 
 **Built completely with my grok 4.5 clanker**
 
@@ -11,7 +11,7 @@ Use the library alone if you want your own commands/UI. Turn on the footer only 
 ### 1. Install
 
 ```bash
-pi install npm:oura-hr
+pi install npm:pi-oura-hr
 # or: pi install git:BrianM0330/oura-hr
 ```
 
@@ -137,7 +137,7 @@ import {
   fetchHealthSnapshot,
   loadConfig,
   renderFooterStatus,
-} from "oura-hr"; // or "./lib/index.ts"
+} from "pi-oura-hr"; // or "./lib/index.ts"
 
 export default function (pi: ExtensionAPI) {
   pi.registerCommand("my-oura", {
@@ -160,8 +160,8 @@ export default function (pi: ExtensionAPI) {
 
 | Import | What you get |
 |--------|----------------|
-| `oura-hr` or `oura-hr/lib` | Client + footer render helpers |
-| `oura-hr/extension` | This pi extension entry |
+| `pi-oura-hr` or `pi-oura-hr/lib` | Client + footer render helpers |
+| `pi-oura-hr/extension` | This pi extension entry |
 
 ## Performance & structure
 
