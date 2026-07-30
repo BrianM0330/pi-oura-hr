@@ -1,0 +1,50 @@
+{
+  "name": "oura-hr",
+  "version": "1.1.0",
+  "description": "Oura Ring client primitives + optional pi footer (heart rate, readiness)",
+  "type": "module",
+  "license": "MIT",
+  "author": "Brian Mendoza <https://github.com/BrianM0330>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianM0330/oura-hr.git"
+  },
+  "homepage": "https://github.com/BrianM0330/oura-hr#readme",
+  "bugs": {
+    "url": "https://github.com/BrianM0330/oura-hr/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "oura",
+    "heartrate",
+    "health"
+  ],
+  "exports": {
+    ".": "./lib/index.ts",
+    "./lib": "./lib/index.ts",
+    "./extension": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "lib/**/*.ts",
+    "skills/**/*",
+    "README.md",
+    "ARCHITECTURE.md",
+    "OURA-API.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "pi": {
+    "extensions": ["./index.ts"],
+    "skills": ["./skills"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  }
+}
