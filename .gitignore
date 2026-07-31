@@ -4,6 +4,8 @@ node_modules/
 .env
 .env.*
 oura.json
+pi-oura-hr.json
 oura-hr-cache.json
+pi-oura-hr-cache.json
 *.tgz
 .npmrc

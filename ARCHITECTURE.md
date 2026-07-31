@@ -5,20 +5,20 @@ How `pi-oura-hr` is put together, how polling relates to the Oura cloud sync, an
 ## Code structure
 
 ```
-oura-hr/                  # repo / local folder (npm name: pi-oura-hr)
+pi-oura-hr/               # repo / local folder / npm name
   index.ts              # Pi extension only: commands + optional footer painter
   lib/
     index.ts            # Public exports (import as "pi-oura-hr" or "./lib")
     types.ts            # Config + API types (footer.* fully editable)
     paths.ts            # URLs, default intervals, default status key
-    config.ts           # ~/.pi/agent/oura.json load/save (mtime cache)
-    cache.ts            # ~/.pi/agent/oura-hr-cache.json (last paint)
+    config.ts           # ~/.pi/agent/pi-oura-hr.json load/save (mtime cache)
+    cache.ts            # ~/.pi/agent/pi-oura-hr-cache.json (last paint)
     http.ts             # Tiny JSON fetch + timeout + Retry-After
     oauth.ts            # Authorize URL, code exchange, refresh
     api.ts              # heartrate / readiness / stress / activity / workout
     age.ts              # Sample age helpers
     footer.ts           # Defaults, resolveFooter, renderFooterStatus
-  skills/oura-hr/       # Agent skill (setup reminders)
+  skills/pi-oura-hr/    # Agent skill (setup reminders)
   README.md             # Human/agent setup
   OURA-API.md           # Field notes on the Oura API
   ARCHITECTURE.md       # This file
@@ -71,7 +71,7 @@ So a 5-minute poll does **not** guarantee a 5-minute-old reading. The footer use
 
 ```
 session_start
-  → load oura-hr-cache.json → setStatus (if footer.enabled)
+  → load pi-oura-hr-cache.json → setStatus (if footer.enabled)
   → wait startupDelayMs (default 90s)
   → poll:
        ensureAccessToken (refresh if needed)
@@ -86,12 +86,12 @@ session_start
 
 ## Editable footer (defaults = shipped look)
 
-All visual knobs live under `footer` in `oura.json`. Omitting a key keeps the default.
+All visual knobs live under `footer` in `pi-oura-hr.json`. Omitting a key keeps the default.
 
 | Key | Default | Meaning |
 |-----|---------|---------|
 | `enabled` | `false` | Opt-in `setStatus` |
-| `statusKey` | `oura-hr` | pi-footer external key |
+| `statusKey` | `pi-oura-hr` | pi-footer external key |
 | `heart` | `❤` | Icon glyph (any Nerd Font / unicode) |
 | `heartColor` | `red` | Named ANSI, theme token, `ansi:N`, or raw ESC |
 | `showBpm` | `true` | Include BPM |
@@ -127,5 +127,5 @@ The extension only calls `ctx.ui.setStatus(key, text)`. Layout is owned by **pi-
 
 - `package.json` `exports`: `.` / `./lib` → client; `./extension` → this entry
 - `pi.extensions` / `pi.skills` for `pi install`
-- No secrets in the repo — only `~/.pi/agent/oura.json` (0600)
+- No secrets in the repo — only `~/.pi/agent/pi-oura-hr.json` (0600)
 - README is the setup path for humans and agents

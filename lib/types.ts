@@ -1,7 +1,7 @@
 /**
  * Shared Oura types and config shape.
  *
- * Config lives at ~/.pi/agent/oura.json (mode 0600) by default.
+ * Config lives at ~/.pi/agent/pi-oura-hr.json (mode 0600) by default.
  * Footer is opt-in via `footer.enabled`. Every footer visual is editable;
  * omitted keys use the package defaults (red ❤, theme text/muted BPM, readiness on).
  */
@@ -15,7 +15,7 @@ export type OuraFooterField = "heart" | "bpm" | "readiness" | "age";
 export interface OuraFooterConfig {
   /** When true, the pi extension paints `setStatus(statusKey, …)`. Default: false. */
   enabled?: boolean;
-  /** pi-footer external-status key. Default: "oura-hr". */
+  /** pi-footer external-status key. Default: "pi-oura-hr". */
   statusKey?: string;
 
   /** Heart / icon glyph. Default: "❤". */

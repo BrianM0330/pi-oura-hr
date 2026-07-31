@@ -1,17 +1,17 @@
 {
   "name": "pi-oura-hr",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Oura Ring client primitives + optional pi footer (heart rate, readiness)",
   "type": "module",
   "license": "MIT",
   "author": "Brian Mendoza <https://github.com/BrianM0330>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BrianM0330/oura-hr.git"
+    "url": "git+https://github.com/BrianM0330/pi-oura-hr.git"
   },
-  "homepage": "https://github.com/BrianM0330/oura-hr#readme",
+  "homepage": "https://github.com/BrianM0330/pi-oura-hr#readme",
   "bugs": {
-    "url": "https://github.com/BrianM0330/oura-hr/issues"
+    "url": "https://github.com/BrianM0330/pi-oura-hr/issues"
   },
   "keywords": [
     "pi-package",

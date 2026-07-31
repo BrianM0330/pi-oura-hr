@@ -47,7 +47,7 @@ async function persistTokens(cfg: OuraConfig, body: TokenBody): Promise<OuraConf
 
 export async function exchangeCode(cfg: OuraConfig, code: string): Promise<OuraConfig> {
   if (!cfg.clientId || !cfg.clientSecret) {
-    throw new Error("clientId and clientSecret required in oura.json");
+    throw new Error("clientId and clientSecret required in pi-oura-hr.json");
   }
   const body = new URLSearchParams({
     grant_type: "authorization_code",

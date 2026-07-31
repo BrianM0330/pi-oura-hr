@@ -1,5 +1,5 @@
 /**
- * oura-hr — Pi extension entry.
+ * pi-oura-hr — Pi extension entry.
  *
  * Library primitives live in `./lib` (importable without this UI).
  * Footer is opt-in and fully config-driven — see README + ARCHITECTURE.md.

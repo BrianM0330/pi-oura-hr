@@ -357,7 +357,7 @@ Separate sensor writing its own HR into HealthKit — usually denser daytime cov
 
 ## 9. This repo’s pi extension
 
-See [README.md](./README.md). Config: `~/.pi/agent/oura.json`. Footer key: `oura-hr`. Poll default: 5 minutes. Commands: `/oura`, `/oura-refresh`, `/oura-auth`, `/oura-setup`.
+See [README.md](./README.md). Config: `~/.pi/agent/pi-oura-hr.json`. Footer key: `pi-oura-hr`. Poll default: 5 minutes. Commands: `/oura`, `/oura-refresh`, `/oura-auth`, `/oura-setup`.
 
 ---
 

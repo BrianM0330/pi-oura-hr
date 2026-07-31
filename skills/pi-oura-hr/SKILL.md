@@ -1,18 +1,18 @@
 ---
-name: oura-hr
+name: pi-oura-hr
 description: Oura Ring client for pi (npm:pi-oura-hr) — OAuth, heart rate, readiness, and an optional fully-editable footer (red heart + BPM). Use when wiring Oura into pi, building a custom health extension on pi-oura-hr lib primitives, or debugging /oura commands.
 ---
 
 # Oura → pi
 
-Client library + optional footer. Config: `~/.pi/agent/oura.json` (mode 0600).
+Client library + optional footer. Config: `~/.pi/agent/pi-oura-hr.json` (mode 0600).
 
 ## Setup
 
 1. Create an app at https://cloud.ouraring.com/oauth/applications with redirect `http://localhost`
 2. `/oura-setup clientId=… clientSecret=… redirectUri=http://localhost`
 3. `/oura-auth` → open URL → paste callback: `/oura-auth http://localhost/?code=…`
-4. Optional footer: `/oura-setup footer.enabled=true` and add `external-status` key `oura-hr` to pi-footer (knownKeys + hiddenKeys)
+4. Optional footer: `/oura-setup footer.enabled=true` and add `external-status` key `pi-oura-hr` to pi-footer (knownKeys + hiddenKeys)
 
 ## Editable footer (defaults = shipped look)
 

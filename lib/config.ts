@@ -7,7 +7,7 @@ import {
   statSync,
 } from "node:fs";
 import { dirname } from "node:path";
-import { DEFAULT_CONFIG_PATH } from "./paths.js";
+import { DEFAULT_CONFIG_PATH, DEFAULT_STATUS_KEY } from "./paths.js";
 import type { OuraConfig } from "./types.js";
 
 let cachedConfig: OuraConfig | null = null;
@@ -72,7 +72,7 @@ export function footerEnabled(cfg: OuraConfig = loadConfig()): boolean {
 }
 
 export function footerStatusKey(cfg: OuraConfig = loadConfig()): string {
-  return cfg.footer?.statusKey || "oura-hr";
+  return cfg.footer?.statusKey || DEFAULT_STATUS_KEY;
 }
 
 export function footerFreshBpmMs(cfg: OuraConfig = loadConfig()): number {

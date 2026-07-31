@@ -12,13 +12,13 @@ Use the library alone if you want your own commands/UI. Turn on the footer only 
 
 ```bash
 pi install npm:pi-oura-hr
-# or: pi install git:BrianM0330/oura-hr
+# or: pi install git:BrianM0330/pi-oura-hr
 ```
 
 Local symlink (dev):
 
 ```bash
-ln -sfn /path/to/oura-hr ~/.pi/agent/extensions/oura-hr
+ln -sfn /path/to/pi-oura-hr ~/.pi/agent/extensions/pi-oura-hr
 ```
 
 ### 2. Create an Oura app
@@ -42,7 +42,7 @@ Open the printed URL → Allow → copy the address bar (`http://localhost/?code
 /oura-auth http://localhost/?code=…&state=…
 ```
 
-Tokens land in `~/.pi/agent/oura.json` (mode `0600`). Refresh tokens are **single-use**; the client always persists the replacement.
+Tokens land in `~/.pi/agent/pi-oura-hr.json` (mode `0600`). Refresh tokens are **single-use**; the client always persists the replacement.
 
 ### 4. (Optional) Footer
 
@@ -54,9 +54,9 @@ Footer is **off by default**. Enable it:
 
 Then wire **pi-footer** once (if you use that package):
 
-1. Add an `external-status` widget with `"externalStatusKey": "oura-hr"` and `"preserveTrimStyles": true`
+1. Add an `external-status` widget with `"externalStatusKey": "pi-oura-hr"` and `"preserveTrimStyles": true`
 2. Put that widget where you want it on the row (end of the line is a good default)
-3. Add `"oura-hr"` to both `extensionStatusRow.knownKeys` and `hiddenKeys`
+3. Add `"pi-oura-hr"` to both `extensionStatusRow.knownKeys` and `hiddenKeys`
 
 `/reload` (or restart pi).
 
@@ -70,7 +70,7 @@ Every visual is a config key. Defaults match the shipped look. Set via JSON or `
 {
   "footer": {
     "enabled": true,
-    "statusKey": "oura-hr",
+    "statusKey": "pi-oura-hr",
     "heart": "❤",
     "heartColor": "red",
     "showBpm": true,
@@ -117,7 +117,7 @@ If `fetch.readiness` is omitted, readiness is fetched when the footer wants it (
 
 ## Config knobs (non-footer)
 
-File: `~/.pi/agent/oura.json`
+File: `~/.pi/agent/pi-oura-hr.json`
 
 | Field | Default | Notes |
 |-------|---------|--------|
